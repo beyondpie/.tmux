@@ -43,6 +43,7 @@ tmux_conf_new_session_prompt=false
 # RGB 24-bit colour support (tmux >= 2.2), possible values are:
 #  - true
 #  - false (default)
+<<<<<<< HEAD
 tmux_conf_24b_colour=false
 
 # default theme
@@ -82,6 +83,9 @@ tmux_conf_theme_colour_17="#e4e4e4"   # white
 #tmux_conf_theme_colour_15="colour0"
 #tmux_conf_theme_colour_16="colour1"
 #tmux_conf_theme_colour_17="colour15"
+=======
+tmux_conf_theme_24b_colour=true
+>>>>>>> 23cd5bb... minor
 
 # window style
 tmux_conf_theme_window_fg="default"
@@ -93,7 +97,13 @@ tmux_conf_theme_window_bg="default"
 tmux_conf_theme_highlight_focused_pane=false
 
 # focused pane colours:
+<<<<<<< HEAD
 tmux_conf_theme_focused_pane_bg="$tmux_conf_theme_colour_2"
+=======
+tmux_conf_theme_focused_pane_fg='default'
+# tmux_conf_theme_focused_pane_bg='#0087d7'               # light blue
+tmux_conf_theme_focused_pane_bg='default'
+>>>>>>> 23cd5bb... minor
 
 # pane border style, possible values are:
 #   - thin (default)
@@ -237,9 +247,16 @@ tmux_conf_theme_status_right=" #{prefix}#{pairing}#{synchronized}#{?battery_stat
 ## tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} , %R , %d %b | #{username}'
 
 # status left style
+<<<<<<< HEAD
 tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
 tmux_conf_theme_status_left_bg="$tmux_conf_theme_colour_9,$tmux_conf_theme_colour_10,$tmux_conf_theme_colour_11"
 tmux_conf_theme_status_left_attr="bold,none,none"
+=======
+tmux_conf_theme_status_left_fg='#000000,#e4e4e4,#e4e4e4'  # black, white , white
+tmux_conf_theme_status_left_bg='#ffff00,#ff00af,#00afff'  # yellow, pink, white blue
+# tmux_conf_theme_status_left_attr='bold,none,none'
+tmux_conf_theme_status_left_attr='bold,#ff00af,#00afff'
+>>>>>>> 23cd5bb... minor
 
 # status right style
 tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_13,$tmux_conf_theme_colour_14"
@@ -327,14 +344,14 @@ tmux_conf_theme_clock_style="24"
 #   - false (default)
 # on macOS, this requires installing reattach-to-user-namespace, see README.md
 # on Linux, this requires xsel or xclip
-tmux_conf_copy_to_os_clipboard=true
+tmux_conf_copy_to_os_clipboard=false
 
 
 # -- user customizations -------------------------------------------------------
 # this is the place to override or undo settings
 
 # increase history size
-set -g history-limit 200000
+set-option -g history-limit 2000
 
 # start with mouse mode enabled
 set -g mouse on
@@ -349,7 +366,7 @@ set -g mouse on
 # unbind C-a
 # unbind C-b
 set -g prefix C-a
-# bind C-a send-prefix
+bind C-a send-prefix
 
 # move status line to top
 #set -g status-position top
